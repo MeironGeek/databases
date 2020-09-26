@@ -41,3 +41,9 @@ mysqldump --opt --where="1 limit 100" mysql help_keyword  > /home/lesson02/dumpt
 <br />
 После указания базы указывается таблица которую нужно выбрать.
 
+
+P.S. > для визуального просомтра предусмотрен adminer. В него можно зайди вбив в барузере http://localhost:8080/
+Сервер = db
+Логин = root
+Password = pass
+
