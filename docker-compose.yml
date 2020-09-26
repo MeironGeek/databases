@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  db:
+    build: ./build/mysql
+    restart: always
+    volumes:
+      - ./databases:/var/lib/mysql
+      - ./mysqlconf/mysqlconf.cnf:/etc/mysql/conf.d/mysqlconf.cnf
+      - ./homework:/home
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    links:
+      - db
