@@ -11,6 +11,8 @@ services:
       - ./homework:/home
     environment:
       MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - 42333:3306
 
   adminer:
     image: adminer
